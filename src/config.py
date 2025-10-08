@@ -1,0 +1,14 @@
+URL = "https://github.com/Hoom4n/BachNet/raw/refs/heads/main/data/jsb_chorales.zip"
+SEED = 42
+SEQ_LEN = 256
+WINDOW_SHIFT = 1
+BATCH_SIZE = 256
+LEARNING_RATE = 1e-3
+WEIGHT_DECAY = 1e-4
+EMBEDDING_DIM = 128
+LSTM_LAYERS = 3
+LSTM_UNITS = 512
+LSTM_DROPOUT = 0.3
+DENSE_UNITS = 256
+DROPOUT = 0.3
+N_EPOCHS = 10
