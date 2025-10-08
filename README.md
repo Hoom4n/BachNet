@@ -66,26 +66,14 @@ A fully in‑graph TensorFlow data pipeline handles preprocessing and streaming.
 
 ## 🏗️ Model Architecture
 
-<table>
-<tr>
-<td width="60%">
-
 The network begins with an embedding layer of size 128, which maps each of the 47 unique note tokens (including silence) into a dense, continuous representation. This is followed by a stack of three LSTM blocks, each with 512 hidden units, input dropout, and layer normalization. LSTMs were chosen over GRUs for their additional gating mechanisms, which are better suited to modeling the long‑term melodic and harmonic dependencies characteristic of Bach’s style. Layer normalization further stabilizes training by controlling gradient and activation variance across time steps.
 
 On top of the recurrent stack, a 256‑unit ReLU feed‑forward layer projects the learned temporal features into a richer latent space, improving the model’s ability to capture nonlinear harmonic relationships. Finally, a dense output layer produces logits over the 47‑token vocabulary, enabling categorical sampling during generation.
 
-</td>
-<td width="40%">
 
-<img src="images/bachnet_arch.PNG" alt="BachNet Architecture" width="100%"/>
-
-</td>
-</tr>
-</table>
-
-
-
-
+<p align="center">
+  <img src="images/bachnet_arch.PNG" width="65%" alt="Screenshot">
+</p> <br/>
 
 ### 📈 Training Setup
 
