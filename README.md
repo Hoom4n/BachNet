@@ -30,10 +30,10 @@ git clone https://github.com/hoom4n/BachNet.git
 cd BachNet
 
 # Build image
-docker build -t bachnet .
+docker compose up --build
 
-# Run container
-docker run -p 7860:7860 bachnet
+# Later runs
+docker compose up
 ```
 ### 💻 Local
 ```bash
